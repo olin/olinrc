@@ -1,0 +1,5 @@
+# Open the SCOPE intranet.
+alias olin-scope='mkdir /Volumes/SCOPE || mount -t smbfs //tryan@fsvs01/SCOPE /Volumes/SCOPE || open /Volumes/SCOPE/SCOPE_intranet/SCOPE_intranet.html'
+
+# Display a list of Olin printer URLs.
+alias olin-printers='curl http://linux.olin.edu/printing/olin-cups.tar.gz --silent | gzip -d - | tar -Of - -x printers.conf | grep "<Printer" | cut -c 10- | sed "s/>\$/.olin.edu\//" | sed "s/^/http:\/\//"'
