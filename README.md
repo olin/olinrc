@@ -1,6 +1,13 @@
 # .olinrc
 
-Add/symlink this to your home directory. Then, add:
+```
+cd ~
+git clone https://github.com/ohack/olinrc.git
+cd olinrc
+./install.sh
+```
+
+Or add this manually to your home directory:
 
 ```
 source ~/.olinrc
